@@ -1,0 +1,55 @@
+.sort-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+/* SORT SELECT – PREMIUM FEEL */
+.sort-select {
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Hover */
+.sort-select:hover {
+  border-color: #000;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  transform: translateY(-2px);
+}
+
+/* Focus */
+.sort-select:focus {
+  outline: none;
+  border-color: #000;
+}
+
+/* Smooth dropdown open feel */
+.sort-select option {
+  padding: 10px;
+}
+
+.sort-active {
+  margin-left: 12px;
+  font-size: 13px;
+  color: #555;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

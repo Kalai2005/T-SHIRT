@@ -1,0 +1,186 @@
+body {
+  background: #f4f4f4;
+}
+
+.customize-wrapper {
+  max-width: 1200px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+}
+
+.customize-left{
+  background: #d4e8bc;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+.customize-right {
+  background:linear-gradient(#f4f4f4,#7fdef3);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* LEFT */
+.customize-left h3 {
+  margin-bottom: 6px;
+}
+.sub {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+/* ===== UPLOAD SECTION – PRO MODE ===== */
+
+.upload-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.upload-sub {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 18px;
+}
+
+/* Upload type */
+.upload-type {
+  margin-bottom: 18px;
+}
+
+.upload-type label {
+  margin-right: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Upload box */
+.upload-box-pro {
+  position: relative;
+  height: 360px;
+  border-radius: 18px;
+  border: 2px dashed #cfcfcf;
+  background: linear-gradient(135deg, #fafafa, #f2f2f2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+.upload-box-pro:hover {
+  border-color: #000;
+  background: #fff;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  transform: translateY(-4px);
+}
+
+/* Hidden input */
+.upload-box-pro input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Placeholder */
+.upload-placeholder {
+  text-align: center;
+  pointer-events: none;
+}
+
+.upload-icon {
+  font-size: 44px;
+  margin-bottom: 10px;
+  animation: floatIcon 2.4s ease-in-out infinite;
+}
+
+@keyframes floatIcon {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.upload-placeholder h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.upload-placeholder p {
+  font-size: 13px;
+  color: #666;
+}
+
+/* Uploaded image preview */
+.upload-box-pro img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+  animation: previewFade 0.4s ease;
+}
+
+@keyframes previewFade {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+.section {
+  margin-bottom: 22px;
+}
+
+.section h4 {
+  margin-bottom: 10px;
+}
+
+.section button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+}
+
+.section button.active {
+  background: #000;
+  color: #fff;
+}
+
+textarea {
+  width: 100%;
+  min-height: 90px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.whatsapp-btn {
+  width: 100%;
+  padding: 16px;
+  background: #25d366;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+
+@media (max-width: 900px) {
+  .customize-wrapper {
+    grid-template-columns: 1fr;
+  }
+}

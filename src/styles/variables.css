@@ -1,0 +1,35 @@
+:root {
+  /* Colors */
+  --primary-color: #333;
+  --secondary-color: #ff6b6b;
+  --text-color: #333;
+  --light-text: #666;
+  --background-color: #f9f9f9;
+  --white: #fff;
+  --gray: #ddd;
+  --light-gray: #f0f0f0;
+  
+  /* Typography */
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-size-base: 1rem;
+  --font-size-large: 1.5rem;
+  --font-size-xl: 2rem;
+  
+  /* Spacing */
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 2rem;
+  --spacing-xl: 3rem;
+  
+  /* Border Radius */
+  --border-radius: 4px;
+  --border-radius-large: 8px;
+  
+  /* Transitions */
+  --transition: all 0.3s ease;
+  
+  /* Box Shadow */
+  --shadow-small: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-large: 0 6px 16px rgba(0, 0, 0, 0.2);
+}

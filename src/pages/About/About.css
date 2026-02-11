@@ -1,0 +1,174 @@
+/* PAGE BASE */
+.about-page {
+  background: #f6f6f6;
+  color: #111;
+}
+
+/* HERO */
+.about-hero-pro {
+  height: 60vh;
+  background: linear-gradient(70deg, #e6a6a6, #36dcf3);
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-inner {
+  max-width: 800px;
+  padding: 0 20px;
+  margin-top: 20px;
+}
+
+.about-hero-pro h1 {
+  font-size: 56px;
+  color: #fff;
+  margin-bottom: 14px;
+  letter-spacing: 1px;
+}
+
+.about-hero-pro p {
+  color: #000000;
+  font-size: 18px;
+}
+
+/* BLOCKS */
+.about-block {
+  max-width: 1100px;
+  margin: 100px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.about-block h2 {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+.about-block p {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #000000;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.alt {
+  background: #fffafa;
+  padding: 100px 20px;
+  border-radius: 40px;
+}
+
+/* GRID */
+.pro-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  margin-top: 50px;
+}
+
+.pro-card {
+  background-color: rgba(234, 234, 233, 0.847);
+  padding: 34px;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.pro-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.14);
+}
+
+.pro-card span {
+  font-size: 40px;
+}
+
+.pro-card h4 {
+  margin: 14px 0 8px;
+}
+
+/* STEPS */
+.steps-pro {
+  display: flex;
+  gap: 24px;
+  margin-top: 50px;
+}
+
+.step-pro {
+  flex: 1;
+  background-color: rgb(243, 224, 222);
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 16px 36px rgba(0,0,0,0.08);
+}
+
+.step-pro span {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  background: #000;
+  color: #fff;
+  border-radius: 50%;
+  line-height: 42px;
+  margin-bottom: 10px;
+}
+
+
+.about-cta-pro {
+  background-color: rgb(241, 209, 241);
+  color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.about-cta-pro h2 {
+  font-size: 36px;
+}
+
+.about-cta-pro p {
+  color: #000000;
+  margin: 14px 0 30px;
+}
+
+.cta-pro-btn {
+  padding: 16px 36px;
+  border-radius: 40px;
+  background: #25d366;
+  color: #000000;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+
+.fade-in {
+  animation: fadeUp 0.8s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 900px) {
+  .pro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .steps-pro {
+    flex-direction: column;
+  }
+
+  .about-hero-pro h1 {
+    font-size: 36px;
+  }
+}
