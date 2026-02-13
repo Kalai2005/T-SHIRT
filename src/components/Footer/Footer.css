@@ -1,5 +1,5 @@
 .footer {
-  background-color: #1b1313;
+  background-color: #000000;
   color: #ffffff;
   padding: 40px 0 ;
 }
@@ -25,7 +25,9 @@
 }
 
 .footer-brand span {
-  font-size: 24px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+  font-size: 28px;
   font-weight: 500;
 }
 
@@ -41,7 +43,9 @@
 .footer-links li a {
   color: #ffffff;
   text-decoration: none;
-  font-size: 16px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  font-weight: 500;
   transition: color 0.3s ease;
 }
 
