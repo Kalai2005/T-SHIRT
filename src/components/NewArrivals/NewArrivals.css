@@ -6,6 +6,7 @@
 
 .new-arrivals h2 {
   font-size: 28px;
+  font-family: 'Times New Roman', Times, serif;
   font-weight: 600;
   margin-bottom: 45px;
   color: #000;
@@ -85,12 +86,14 @@
 
 .new-arrival-box h4 {
   margin: 12px 0 4px;
-  font-size: 16px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
 }
 
 .new-arrival-box p {
-  font-size: 14px;
-  color: #666;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  color: #000000;
 }
 
 .arrival-btn {

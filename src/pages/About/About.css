@@ -7,7 +7,8 @@
 /* HERO */
 .about-hero-pro {
   height: 60vh;
-  background: linear-gradient(70deg, #e6a6a6, #36dcf3);
+  background-color: rgb(249, 228, 228);
+  padding: 30px;;
   display: flex;
   margin-top: 10px;
   align-items: center;
@@ -22,15 +23,18 @@
 }
 
 .about-hero-pro h1 {
-  font-size: 56px;
+  font-size: 64px;
+  font-family: 'Times New Roman', Times, serif;
   color: #fff;
+  font-weight: 800;
   margin-bottom: 14px;
   letter-spacing: 1px;
 }
 
 .about-hero-pro p {
+  font-family: 'Times New Roman', Times, serif;
   color: #000000;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 /* BLOCKS */
@@ -42,7 +46,8 @@
 }
 
 .about-block h2 {
-  font-size: 34px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 54px;
   margin-bottom: 20px;
 }
 
@@ -50,8 +55,9 @@
   max-width: 800px;
   margin: 0 auto;
   color: #000000;
-  line-height: 1.8;
-  font-size: 16px;
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 1.7;
+  font-size: 20px;
 }
 
 .alt {
@@ -86,6 +92,8 @@
 }
 
 .pro-card h4 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 22px;
   margin: 14px 0 8px;
 }
 
@@ -117,17 +125,21 @@
 
 
 .about-cta-pro {
-  background-color: rgb(241, 209, 241);
+  background-color: rgb(249, 237, 249);
   color: #fff;
   padding: 100px 20px;
   text-align: center;
 }
 
 .about-cta-pro h2 {
-  font-size: 36px;
+  color: #000000;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 42px;
 }
 
 .about-cta-pro p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 24px;
   color: #000000;
   margin: 14px 0 30px;
 }
@@ -139,7 +151,7 @@
   color: #000000;
   text-decoration: none;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 

@@ -22,6 +22,7 @@
 
 .brand-main {
   font-size: 33px; 
+  font-family: 'Times New Roman', Times, serif;
   font-weight: 700;
   color: #ffffff;
 }
@@ -30,6 +31,7 @@
 .brand-sub {
   font-size: 18px;
   font-weight: 500;
+  font-family: 'Times New Roman', Times, serif;
   color: #ffffff;
   letter-spacing: 1px;
   margin-left: 2px;
@@ -79,6 +81,7 @@
 .navbar-links a {
   text-decoration: none;
   color: #ffffff;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 18px;
 }
 

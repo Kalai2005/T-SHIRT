@@ -92,9 +92,7 @@
     margin-top: 30px;
   }
 
-  .hero-left p {
-    margin: auto;
-  }
+
 }
 
 
@@ -104,6 +102,7 @@
   color: #000000;
   margin-bottom: 15px;
   padding-left: 28px;
+  font-family: 'Times New Roman', Times, serif;
 
   letter-spacing: 0.5px;     
 
@@ -114,7 +113,9 @@
 .hero-minimal p {
   max-width: 650px;
   font-size: 22px;
+  font-family: 'Times New Roman', Times, serif;
   padding-left: 28px;
+  font-weight: 350;
   line-height: 1.5;          /* 🆕 better readability */
   color: #000000;
 

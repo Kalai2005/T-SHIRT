@@ -1,9 +1,72 @@
+/* Added styles for Products page */
+.products-topbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 24px;
+}
+
+.filter-toggle-btn {
+  background-color: #e79292;
+  color: #ffffff;
+  margin-top: 30px;
+  width: 150px;
+  padding: 12px 0;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  transition:
+    background 0.3s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* 🔥 HOVER EFFECT */
+.filter-toggle-btn:hover {
+  background: linear-gradient(135deg, #1f1f1f, #2a2a2a);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* 👇 CLICK (PRESS) EFFECT */
+.filter-toggle-btn.active {
+  background: linear-gradient(135deg, #ffffff, #e5e5e5);
+  color: #b69999;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+}
+
+
+/* 👀 KEYBOARD / ACCESSIBILITY (PRO TOUCH) */
+.filter-toggle-btn:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+
+.products-page {
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+}
+
+.right-section {
+  flex: 1;
+  min-width: 0;
+}
 .products-page {
   display: flex;
   gap: 30px;
   padding: 20px;
   background-color: #ffffff;
 }
+
+
 
 .filters-panel {
   width: 260px;
@@ -19,7 +82,7 @@
 
 .filters-panel label {
   display: block;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .right-section {

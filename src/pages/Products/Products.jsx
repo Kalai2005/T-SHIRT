@@ -7,6 +7,7 @@ import "./Products.css";
 
 const Products = () => {
   const [sortBy, setSortBy] = useState("");
+  const [showFilter, setShowFilter] = useState(false); // ✅ NEW
 
   const [tempFilters, setTempFilters] = useState({
     category: [],
@@ -25,6 +26,7 @@ const Products = () => {
 
   const applyFilters = () => {
     setAppliedFilters(tempFilters);
+    setShowFilter(false); // ✅ close filter after apply (UX)
   };
 
   const applySorting = (products) => {
@@ -34,59 +36,46 @@ const Products = () => {
       case "priceLowHigh":
         sorted.sort((a, b) => a.price - b.price);
         break;
-
       case "priceHighLow":
         sorted.sort((a, b) => b.price - a.price);
         break;
-
       case "popular":
-       
         sorted.sort((a, b) => b.discount - a.discount);
         break;
-
       case "bestRated":
         sorted.sort((a, b) => b.rating - a.rating);
         break;
-
       default:
         break;
     }
 
     return sorted;
   };
+  
+  
 
   const filteredProducts = productsData.filter(product => {
-
-    
     if (
       appliedFilters.category.length > 0 &&
       !appliedFilters.category.includes(product.category)
     ) return false;
 
-    
     if (
       appliedFilters.price &&
       (product.price < appliedFilters.price[0] ||
-       product.price > appliedFilters.price[1])
+        product.price > appliedFilters.price[1])
     ) return false;
 
-    
     if (
       appliedFilters.size.length > 0 &&
-      !appliedFilters.size.some(size =>
-        product.sizes.includes(size)
-      )
+      !appliedFilters.size.some(size => product.sizes.includes(size))
     ) return false;
 
-    
     if (
       appliedFilters.color.length > 0 &&
-      !appliedFilters.color.some(color =>
-        product.colors.includes(color)
-      )
+      !appliedFilters.color.some(color => product.colors.includes(color))
     ) return false;
 
-    
     if (
       appliedFilters.fabric.length > 0 &&
       !appliedFilters.fabric.includes(product.fabric)
@@ -97,51 +86,62 @@ const Products = () => {
       !appliedFilters.fit.includes(product.fit)
     ) return false;
 
-   
     if (
       appliedFilters.sleeve.length > 0 &&
       !appliedFilters.sleeve.includes(product.sleeve)
     ) return false;
 
-   
     if (
       appliedFilters.design.length > 0 &&
       !appliedFilters.design.includes(product.design)
     ) return false;
 
-    
     if (
       appliedFilters.rating &&
       product.rating < appliedFilters.rating
     ) return false;
 
-   
     if (
       appliedFilters.discount &&
       product.discount < appliedFilters.discount
     ) return false;
 
-    return true; 
+    return true;
   });
 
   return (
-    <div className="products-page">
-      <Filters
-        filters={tempFilters}
-        setFilters={setTempFilters}
-        onApply={applyFilters}
-      />
+    <>
+      {/* TOP BAR */}
+      <div className="products-topbar">
+        <button
+          className="filter-toggle-btn"
+          onClick={() => setShowFilter(prev => !prev)}
+        >
+          Filter
+        </button>
 
-      <div className="right-section">
         <SortBar sortBy={sortBy} setSortBy={setSortBy} />
+      </div>
 
-        <div className="products-grid">
-          {applySorting(filteredProducts).map(item => (
-            <ProductCard key={item.id} product={item} />
-          ))}
+      {/* MAIN LAYOUT */}
+      <div className="products-page">
+        {showFilter && (
+          <Filters
+            filters={tempFilters}
+            setFilters={setTempFilters}
+            onApply={applyFilters}
+          />
+        )}
+
+        <div className="right-section">
+          <div className="products-grid">
+            {applySorting(filteredProducts).map(item => (
+              <ProductCard key={item.id} product={item} />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

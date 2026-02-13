@@ -1,5 +1,5 @@
 .customize-cta {
-  background-color: #7ce1ee;   
+  background-color: rgb(245, 239, 239);   
   text-align: center;
   padding: 80px 20px;
   margin-top: 0;
@@ -11,18 +11,21 @@
 }
 
 .customize-cta h2 {
-  font-size: 28px;
+  font-size: 32px;
+  font-family: 'Times New Roman', Times, serif;
   font-weight: 600;
   color: #000;
   margin-bottom: 15px;
 }
 
 .customize-cta p {
-  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  font-weight: 400;
   line-height: 1.6;
   max-width: 650px;
   margin: 0 auto 35px;
-  color: #ffffff;
+  color: #000000;
 }
 
 
@@ -38,7 +41,7 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 10px 24px rgba(40, 16, 255, 0.35);
+  box-shadow: 0 10px 24px rgba(26, 0, 255, 0.35);
   transition: all 0.3s ease;
   animation: ctaPulse 2.8s infinite;
 }
@@ -77,9 +80,9 @@
     box-shadow: 0 0 0 0 rgba(89, 72, 240, 0.5);
   }
   70% {
-    box-shadow: 0 0 0 16px rgba(25, 0, 255, 0);
+    box-shadow: 0 0 0 0px rgba(89, 72, 240, 0.5);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(25, 0, 255, 0);
+    box-shadow: 0 0 0 0 rgba(33, 11, 225, 0);
   }
 }

@@ -11,24 +11,22 @@ body {
 }
 
 .customize-left{
-  background: #d4e8bc;
+  background: #b9fdf9;
   padding: 30px;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 .customize-right {
-  background:linear-gradient(#f4f4f4,#7fdef3);
+  background-color: rgb(245, 239, 239);
   padding: 30px;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 /* LEFT */
-.customize-left h3 {
-  margin-bottom: 6px;
-}
+
+
 .sub {
-  font-size: 14px;
   color: #666;
   margin-bottom: 16px;
 }
@@ -36,13 +34,15 @@ body {
 /* ===== UPLOAD SECTION – PRO MODE ===== */
 
 .upload-title {
-  font-size: 22px;
+  font-size: 34px;
+  font-family: 'Times New Roman', Times, serif;
   font-weight: 700;
   margin-bottom: 6px;
 }
 
 .upload-sub {
-  font-size: 14px;
+  font-size: 20px;
+  font-weight: 400;
   color: #666;
   margin-bottom: 18px;
 }
@@ -106,13 +106,15 @@ body {
 }
 
 .upload-placeholder h4 {
-  font-size: 18px;
+  font-size: 24px;
+  font-family: 'Times New Roman', Times, serif;
   font-weight: 600;
   margin-bottom: 4px;
 }
 
 .upload-placeholder p {
-  font-size: 13px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
   color: #666;
 }
 
@@ -135,12 +137,18 @@ body {
   }
 }
 
-
+.customize-right {
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
 .section {
-  margin-bottom: 22px;
+  margin-top: 15px;
+  margin-bottom: 18px;
 }
 
 .section h4 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
   margin-bottom: 10px;
 }
 
