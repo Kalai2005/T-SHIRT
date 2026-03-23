@@ -114,10 +114,11 @@ const Products = () => {
       {/* TOP BAR */}
       <div className="products-topbar">
         <button
-          className="filter-toggle-btn"
+          className={`filter-toggle-btn ${showFilter ? "active" : ""}`}
           onClick={() => setShowFilter(prev => !prev)}
+          aria-pressed={showFilter}
         >
-          Filter
+          {showFilter ? "Hide Filters" : "Show Filters"}
         </button>
 
         <SortBar sortBy={sortBy} setSortBy={setSortBy} />
