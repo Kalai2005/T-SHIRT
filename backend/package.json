@@ -3,13 +3,20 @@
   "version": "1.0.0",
   "type": "commonjs",
   "main": "server.js",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "serve": "firebase emulators:start --only functions --config ../firebase.json",
+    "deploy": "firebase deploy --only functions --config ../firebase.json"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.19.2",
+    "firebase-admin": "^12.7.0",
+    "firebase-functions": "^5.1.1",
     "multer": "^1.4.5-lts.1",
     "sharp": "^0.33.4"
   },

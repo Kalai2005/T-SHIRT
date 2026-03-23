@@ -61,6 +61,39 @@ npm run dev
 - `npm run build` - Build the project for production
 - `npm run preview` - Preview the production build
 
+## Run Backend On Firebase
+
+1. Install Firebase CLI globally (once):
+```bash
+npm install -g firebase-tools
+```
+
+2. Set your Firebase project ID in `.firebaserc`:
+```json
+{
+	"projects": {
+		"default": "your-firebase-project-id"
+	}
+}
+```
+
+3. Install backend dependencies:
+```bash
+cd backend
+npm install
+```
+
+4. Login and deploy backend function:
+```bash
+firebase login
+firebase deploy --only functions
+```
+
+5. Your backend API endpoint will be:
+```text
+https://us-central1-<your-firebase-project-id>.cloudfunctions.net/api
+```
+
 ## Technologies Used
 
 - **React 18** - UI library

@@ -2,8 +2,8 @@ const express = require("express");
 const multer = require("multer");
 const sharp = require("sharp");
 const path = require("path");
-const fs = require("fs");
 const cors = require("cors");
+const functions = require("firebase-functions");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -17,7 +17,10 @@ const previewsDir = path.join(uploadsDir, "previews");
 const mockupsDir = path.join(__dirname, "mockups");
 
 const upload = multer({
-  dest: designsDir,
+  storage: multer.memoryStorage(),
+  limits: {
+    fileSize: 8 * 1024 * 1024,
+  },
 });
 
 const getMockupPath = (product, color) => {
@@ -38,31 +41,40 @@ const getMockupPath = (product, color) => {
 app.use("/uploads", express.static("uploads"));
 
 app.post("/api/print-preview", upload.single("design"), async (req, res) => {
-  const { product, color } = req.body;
+  try {
+    const { product, color } = req.body;
 
-  const mockupPath =
-    product === "T-Shirt"
-      ? `mockups/tshirt-${color.toLowerCase()}.png`
-      : `mockups/hoodie-${color.toLowerCase()}.png`;
+    if (!req.file) {
+      return res.status(400).json({ error: "No design file uploaded." });
+    }
 
-  const outputPath = `uploads/previews/preview-${Date.now()}.png`;
+    const mockupPath = getMockupPath(product, color);
 
-  await sharp(mockupPath)
-    .composite([
-      {
-        input: req.file.path,
-        top: 420,
-        left: 350,
-        blend: "multiply",
-      },
-    ])
-    .toFile(outputPath);
+    const composed = await sharp(mockupPath)
+      .composite([
+        {
+          input: req.file.buffer,
+          top: 420,
+          left: 350,
+          blend: "multiply",
+        },
+      ])
+      .png()
+      .toBuffer();
 
-  res.json({
-    previewUrl: `http://localhost:5000/${outputPath}`,
+    return res.json({
+      previewUrl: `data:image/png;base64,${composed.toString("base64")}`,
+    });
+  } catch (error) {
+    console.error("print-preview error:", error);
+    return res.status(500).json({ error: "Failed to generate preview." });
+  }
+});
+
+exports.api = functions.https.onRequest(app);
+
+if (process.env.NODE_ENV !== "production") {
+  app.listen(PORT, () => {
+    console.log(`Backend running on http://localhost:${PORT}`);
   });
-});
-
-app.listen(PORT, () => {
-  console.log(`Backend running on http://localhost:${PORT}`);
-});
+}
